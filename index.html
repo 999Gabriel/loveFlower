@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beziehungsblume</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Three.js Bibliothek -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <!-- OrbitControls für interaktive Kamera -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <!-- GLTF Loader für komplexe 3D-Modelle (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Unsere Beziehungsblume</h1>
+        
+        <div class="date-input-container">
+            <label for="relationship-date">Wann hat eure Beziehung begonnen?</label>
+            <input type="date" id="relationship-date" name="relationship-date">
+            <div class="button-container">
+                <button id="set-date" class="btn">Datum setzen</button>
+                <button id="reset-date" class="btn">Zurücksetzen</button>
+            </div>
+        </div>
+        
+        <div class="info-container">
+            <p>Eure Beziehung blüht seit <span id="days-count">0</span> Tagen.</p>
+            <p id="milestone-message" class="hidden"></p>
+        </div>
+        
+        <div id="flower-container" class="flower-container"></div>
+    </div>
+    
+    <script src="flower.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
